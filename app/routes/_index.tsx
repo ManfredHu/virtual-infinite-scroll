@@ -69,6 +69,7 @@ export default function InfiniteScroll() {
       setEnd(_end);
     }
     const _startOffset = scrollTop - (scrollTop % itemHeight)
+    console.log(`startOffset: ${startOffset}, scrollTop: ${scrollTop}`)
     setStartOffset(_startOffset);
   };
 
@@ -100,7 +101,6 @@ export default function InfiniteScroll() {
     setRenderListData(listData.slice(start, end));
   }, [start, end, listData]);
 
-  console.log('startOffset', startOffset)
   return (
     <div
       className="infinite-list-container"
