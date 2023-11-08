@@ -1,0 +1,45 @@
+body {
+  height: 100%;
+  margin: unset;
+  overflow: hidden;
+}
+
+.infinite-list-container {
+  overflow-y: auto;
+  position: relative;
+  /* 启用了带有动量的滚动，这意味着当用户停止触摸滚动区域后，滚动会以一定的速度继续移动，并且慢慢停下来，类似于iOS上原生应用的滚动效果。 */
+  -webkit-overflow-scrolling: touch;
+}
+
+.infinite-list-phantom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.infinite-list {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.infinite-list-item {
+  box-sizing: border-box;
+  border-bottom: 1px solid green;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.infinite-list-item-main {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
